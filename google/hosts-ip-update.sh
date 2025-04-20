@@ -57,14 +57,14 @@ function generate_hosts2 {
 # echo "# Generated on $(date)" >> $output
 # echo "# From: $hostURLs" >> $output
 # echo >> $output
-echo "#$IPSix forcesafesearch.google.com" >> $output
-echo "#$IPFour forcesafesearch.google.com" >> $output
+echo "# $IPSix forcesafesearch.google.com" >> $output
+echo "# $IPFour forcesafesearch.google.com" >> $output
 echo >> $output
 generate_hosts $IPSix
 generate_hosts $IPFour
 
 # Generate ipv4-only hosts 
-echo "#$IPFour forcesafesearch.google.com" >> $output2
+echo "# $IPFour forcesafesearch.google.com" >> $output2
 echo >> $output2
 generate_hosts2 $IPFour
 
