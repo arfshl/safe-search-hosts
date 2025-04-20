@@ -1,1 +1,5 @@
 
+#204.79.197.220 strict.bing.com
+
+204.79.197.220 edgeservices.bing.com .bing.com
+204.79.197.220 www.edgeservices.bing.com .bing.com
