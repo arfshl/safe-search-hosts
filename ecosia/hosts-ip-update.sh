@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 #
 # Copyright 2018 by Gregory L. Dietsche <gregory.dietsche@cuw.edu>
 #
