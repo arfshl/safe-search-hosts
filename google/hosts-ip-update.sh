@@ -34,13 +34,15 @@ if [ -z "$IPSix" ] || [ -z "$IPFour" ]; then
 	exit 1
 fi
 
-#Fetch a current list of Google owned domains
+# Fetch a current list of Google owned domains
 code=$(curl --silent --write-out %{http_code} --output $tempfile $hostURLs)
 if [ "$code" -ne "200" ] ; then
         rm $tempfile
         echo Fetching list of google owned domains failed with http status code $code
         exit $code
 fi
+
+# Function: generate_hosts
 
 function generate_hosts {
 	sed "s/^./$1 /"  $tempfile >> $output
@@ -52,7 +54,7 @@ function generate_hosts2 {
 	sed "s/^/$1 www/" $tempfile >> $output2
 }
 
-#Generate hosts file that will cause/ Safe Search to be always on
+# Generate hosts file that will cause/ Safe Search to be always on
 # echo "# Google Safe Search Host List" > $output
 # echo "# Generated on $(date)" >> $output
 # echo "# From: $hostURLs" >> $output
