@@ -19,6 +19,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Update Hosts IP
       run: |
+        pwd
         bash $GITHUB_WORKSPACE/google/hosts-ip-update.sh
     - name: Commit and push changes
       run: |
