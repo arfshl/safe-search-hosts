@@ -38,6 +38,7 @@ if [ "$code" -ne "200" ] ; then
 fi
 
 function generate_hosts {
+        sed -i d $output
 	sed "s/^./$1 /"  $tempfile >> $output
 	sed "s/^/$1 www/" $tempfile >> $output
 }
