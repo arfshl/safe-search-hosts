@@ -12,7 +12,7 @@
 # other Google ccTLD country subdomains your users may use) to be a CNAME for
 # forcesafesearch.google.com.
 #
-# Forked And Modified by 20-04-2025
+# Forked And Modified since 20-04-2025
 
 # Where to download the list of domains that google search uses.
 hostURLs=https://www.google.com/supported_domains
@@ -43,10 +43,10 @@ function generate_hosts {
 }
 
 #Generate hosts file that will cause/ Safe Search to be always on
-echo "# Google Safe Search Host List" > $output
-echo "# Generated on $(date)" >> $output
-echo "# From: $hostURLs" >> $output
-echo >> $output
+# echo "# Google Safe Search Host List" > $output
+# echo "# Generated on $(date)" >> $output
+# echo "# From: $hostURLs" >> $output
+# echo >> $output
 echo "#$IPSix forcesafesearch.google.com" >> $output
 echo "#$IPFour forcesafesearch.google.com" >> $output
 echo >> $output
