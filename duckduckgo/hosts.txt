@@ -1,1 +1,6 @@
+#52.149.247.1 safe.duckduckgo.com
 
+52.149.247.1 duckduckgo.com
+52.149.247.1 tart.duckduckgo.com
+52.149.247.1 www.duckduckgo.com
+52.149.247.1 wwwstart.duckduckgo.com
