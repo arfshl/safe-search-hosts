@@ -29,7 +29,7 @@ output='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/
 
 
 
-# IP Address for Google Safe Search
+# IP Address for Bing strict mode
 #IPSix=$(dig strict.bing.com AAAA +short)
 IPFour=$(curl --silent 'https://dns.google.com/resolve?name=strict.bing.com&type=A' | jq -cr '.Answer[] | select(.type == 1) | .data')
 #if [ -z "$IPSix" ] || [ -z "$IPFour" ]; then
@@ -50,6 +50,7 @@ IPFour=$(curl --silent 'https://dns.google.com/resolve?name=strict.bing.com&type
 
 
 
+# Function: generate_hosts
 
 function generate_hosts {
 	sed "s/^/$1 /" $tempfile >> $output
@@ -58,7 +59,7 @@ function generate_hosts {
 
 
 
-#Generate hosts file that will cause/ Safe Search to be always on
+# Generate hosts file that will cause/ Safe Search to be always on
 # echo "# Google Safe Search Host List" > $output
 # echo "# Generated on $(date)" >> $output
 # echo "# From: $hostURLs" >> $output
