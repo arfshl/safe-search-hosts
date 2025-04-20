@@ -19,7 +19,7 @@ hostURLs=https://www.google.com/supported_domains
 
 # Files
 tempfile='$GITHUB_WORKSPACE/google/supported-domains'
-output='$GITHUB_WORKSPACE/google/supported-domains/hosts.txt'
+output='$GITHUB_WORKSPACE/google/hosts.txt'
 
 # IP Address for Google Safe Search
 IPSix=$(dig forcesafesearch.google.com AAAA +short)
