@@ -18,8 +18,8 @@
 hostURLs=https://www.google.com/supported_domains
 
 # Files
-tempfile='$GITHUB_WORKSPACE/google/supported-domains'
-output='$GITHUB_WORKSPACE/google/hosts.txt'
+tempfile='/home/runner/work/safe-search-hosts/google/supported-domains'
+output='/home/runner/work/safe-search-hosts/google/hosts.txt'
 
 # IP Address for Google Safe Search
 IPSix=$(dig forcesafesearch.google.com AAAA +short)
