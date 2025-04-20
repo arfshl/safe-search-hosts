@@ -1,0 +1,4 @@
+# safesearch.pixabay.com
+
+103.169.142.8 pixabay.com
+103.169.142.8 www.pixabay.com
