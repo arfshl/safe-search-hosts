@@ -16,6 +16,7 @@
 
 # Delete ALL before Executing
 sed -i d /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts.txt
+sed -i d /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts-ipv4only.txt
 
 # Where to download the list of domains that google search uses.
 hostURLs=https://www.google.com/supported_domains
@@ -23,6 +24,7 @@ hostURLs=https://www.google.com/supported_domains
 # Files
 tempfile='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/supported-domains'
 output='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts.txt'
+output2='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts-ipv4only.txt'
 
 # IP Address for Google Safe Search
 IPSix=$(dig forcesafesearch.google.com AAAA +short)
@@ -55,5 +57,11 @@ echo "#$IPFour forcesafesearch.google.com" >> $output
 echo >> $output
 generate_hosts $IPSix
 generate_hosts $IPFour
+
+# Generate ipv4-only hosts 
+echo "#$IPFour forcesafesearch.google.com" >> $output2
+echo >> $output2
+generate_hosts $IPFour
+
 
 rm $tempfile
