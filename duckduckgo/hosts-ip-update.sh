@@ -29,7 +29,7 @@ output='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/
 
 
 
-# IP Address for Google Safe Search
+# IP Address for DuckDuckGo safe mode
 #IPSix=$(dig safe.duckduckgo.com AAAA +short)
 IPFour=$(dig safe.duckduckgo.com A +short)
 #if [ -z "$IPSix" ] || [ -z "$IPFour" ]; then
@@ -51,15 +51,16 @@ IPFour=$(dig safe.duckduckgo.com A +short)
 
 
 
+# Function: generate_hosts
+
 function generate_hosts {
-        sed "s/^./$1 /"  $tempfile >> $output
-        sed "s/^/$1 www/" $tempfile >> $output
+        sed "s/^/$1 /" $tempfile >> $output
 }
 
 
 
 
-#Generate hosts file that will cause/ Safe Search to be always on
+# Generate hosts file that will cause/ Safe Search to be always on
 # echo "# Google Safe Search Host List" > $output
 # echo "# Generated on $(date)" >> $output
 # echo "# From: $hostURLs" >> $output
