@@ -18,8 +18,8 @@
 hostURLs=https://www.google.com/supported_domains
 
 # Files
-tempfile='/home/runner/work/safe-search-hosts/google/supported-domains'
-output='/home/runner/work/safe-search-hosts/google/hosts.txt'
+tempfile='/home/runner/work/arfshl/safe-search-hosts/google/supported-domains'
+output='/home/runner/work/arfshl/safe-search-hosts/google/hosts.txt'
 
 # IP Address for Google Safe Search
 IPSix=$(dig forcesafesearch.google.com AAAA +short)
