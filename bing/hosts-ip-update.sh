@@ -15,8 +15,16 @@
 # Forked And Modified since 20-04-2025
 
 
+
+
 # Where to download the list of domains that google search uses.
 # hostURLs=https://www.google.com/supported_domains
+
+
+# Install Requirements
+
+
+sudo apt install curl jq -y
 
 
 # Files
@@ -24,13 +32,17 @@ tempfile='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-host
 output='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/bing/hosts.txt'
 
 
+
+
 # IP Address for Google Safe Search
-IPSix=$(dig strict.bing.com AAAA +short)
-IPFour=$(dig strict.bing.com A +short)
-if [ -z "$IPSix" ] || [ -z "$IPFour" ]; then
-        echo "Getting IP address for forcesafesearch.google.com failed"
-	exit 1
-fi
+#IPSix=$(dig strict.bing.com AAAA +short)
+IPFour=$(curl --silent 'https://dns.google.com/resolve?name=strict.bing.com&type=A' | jq -cr '.Answer[] | select(.type == 1) | .data')
+#if [ -z "$IPSix" ] || [ -z "$IPFour" ]; then
+#        echo "Getting IP address for forcesafesearch.google.com failed"
+#	exit 1
+#fi
+
+
 
 
 #Fetch a current list of Google owned domains
@@ -42,10 +54,14 @@ fi
 #fi
 
 
+
+
 function generate_hosts {
 	sed "s/^./$1 /"  $tempfile >> $output
 	sed "s/^/$1 www/" $tempfile >> $output
 }
+
+
 
 
 #Generate hosts file that will cause/ Safe Search to be always on
@@ -53,11 +69,14 @@ function generate_hosts {
 # echo "# Generated on $(date)" >> $output
 # echo "# From: $hostURLs" >> $output
 # echo >> $output
-echo "#$IPSix strict.bing.com" >> $output
-echo "#$IPSix strict.bing.com" >> $output
+echo "#$IPFour strict.bing.com" >> $output
+#echo "#$IPSix strict.bing.com" >> $output
 echo >> $output
-generate_hosts $IPSix
+#generate_hosts $IPSix
 generate_hosts $IPFour
+
+
+
 
 
 
