@@ -21,6 +21,7 @@ jobs:
       run: |
         pwd
         bash $GITHUB_WORKSPACE/google/hosts-ip-update.sh
+        bash $GITHUB_WORKSPACE/bing/hosts-ip-update.sh
     - name: Commit and push changes
       run: |
         git config user.name "github-actions[bot]"
