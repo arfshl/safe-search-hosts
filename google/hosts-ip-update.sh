@@ -15,7 +15,7 @@
 # Forked And Modified since 20-04-2025
 
 # Delete ALL before Executing
-sed -i d $output
+sed -i d /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts.txt
 
 # Where to download the list of domains that google search uses.
 hostURLs=https://www.google.com/supported_domains
