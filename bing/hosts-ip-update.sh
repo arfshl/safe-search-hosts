@@ -52,8 +52,7 @@ IPFour=$(curl --silent 'https://dns.google.com/resolve?name=strict.bing.com&type
 
 
 function generate_hosts {
-	sed  $tempfile >> $output
-	sed  $tempfile >> $output
+	sed "/s/^/$1 /" $tempfile >> $output
 }
 
 
