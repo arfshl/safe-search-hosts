@@ -12,13 +12,14 @@
 # other Google ccTLD country subdomains your users may use) to be a CNAME for
 # forcesafesearch.google.com.
 #
+# Forked And Modified by 20-04-2025
 
 # Where to download the list of domains that google search uses.
 hostURLs=https://www.google.com/supported_domains
 
 # Files
-tempfile='supported-domains'
-output='hosts'
+tempfile='$GITHUB_WORKSPACE/google/supported-domains'
+output='$GITHUB_WORKSPACE/google/supported-domains/hosts.txt'
 
 # IP Address for Google Safe Search
 IPSix=$(dig forcesafesearch.google.com AAAA +short)
