@@ -47,6 +47,11 @@ function generate_hosts {
 	sed "s/^/$1 www/" $tempfile >> $output
 }
 
+function generate_hosts2 {
+	sed "s/^./$1 /"  $tempfile >> $output2
+	sed "s/^/$1 www/" $tempfile >> $output2
+}
+
 #Generate hosts file that will cause/ Safe Search to be always on
 # echo "# Google Safe Search Host List" > $output
 # echo "# Generated on $(date)" >> $output
@@ -61,7 +66,7 @@ generate_hosts $IPFour
 # Generate ipv4-only hosts 
 echo "#$IPFour forcesafesearch.google.com" >> $output2
 echo >> $output2
-generate_hosts $IPFour
+generate_hosts2 $IPFour
 
 
 rm $tempfile
