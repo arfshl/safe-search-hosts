@@ -1,1 +1,10 @@
 
+#strict-bing-com.a-0017.a-msedge.net.
+a-0017.a-msedge.net. strict.bing.com
+#strict-bing-com.a-0017.a-msedge.net.
+a-0017.a-msedge.net. strict.bing.com
+
+strict-bing-com.a-0017.a-msedge.net. edgeservices.bing.com .www.bing.com
+strict-bing-com.a-0017.a-msedge.net. www.edgeservices.bing.com .www.bing.com
+strict-bing-com.a-0017.a-msedge.net. edgeservices.bing.com .www.bing.com
+strict-bing-com.a-0017.a-msedge.net. www.edgeservices.bing.com .www.bing.com
