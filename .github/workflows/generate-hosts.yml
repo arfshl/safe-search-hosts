@@ -29,8 +29,8 @@ jobs:
       run: |
         bash $GITHUB_WORKSPACE/google/hosts-ip-update.sh
         bash $GITHUB_WORKSPACE/yandex/hosts-ip-update.sh
-        flrender $GITHUB_WORKSPACE/hosts.template $GITHUB_WORKSPACE/hosts.txt
-        flrender $GITHUB_WORKSPACE/hosts-ipv4only.template $GITHUB_WORKSPACE/hosts-ipv4only.txt
+ #       flrender $GITHUB_WORKSPACE/hosts.template $GITHUB_WORKSPACE/hosts.txt
+ #       flrender $GITHUB_WORKSPACE/hosts-ipv4only.template $GITHUB_WORKSPACE/hosts-ipv4only.txt
       
     - name: Commit and push changes
       run: |
