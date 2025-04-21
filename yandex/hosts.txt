@@ -1,5 +1,5 @@
 # Yandex Safe Search Host List
-# Generated on Mon Apr 21 13:08:08 UTC 2025
+# Generated on Mon Apr 21 13:18:13 UTC 2025
 # From: https://github.com/arfshl/safesearch-enforcing-hosts/raw/main/yandex/domains
 
 # 213.180.193.56
