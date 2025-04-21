@@ -3,7 +3,7 @@
 # Last Modified: %timestamp%
 # Description: This hosts file will cause Safe Search to be always on
 
-%%include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/google/hosts.txt%
+%include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/google/hosts.txt%
 
 %include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/bing/hosts.txt%
 
