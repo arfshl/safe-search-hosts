@@ -3,10 +3,10 @@
 # Last Modified: %timestamp%
 # Description: This hosts file will cause Safe Search to be always on
 
-%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts.txt%
+%%include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/google/hosts.txt%
 
-%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/bing/hosts.txt%
+%include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/bing/hosts.txt%
 
-%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/ecosia/hosts.txt%
+%include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/ecosia/hosts.txt%
 
-%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/yandex/hosts.txt%
+%include https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/yandex/hosts.txt%
