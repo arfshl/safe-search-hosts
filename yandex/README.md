@@ -1,0 +1,1 @@
+#### Sources:https://github.com/AdguardTeam/HostlistsRegistry/raw/main/assets/engines_safe_search.txt
