@@ -1,3 +1,7 @@
+# Google Safe Search Host List (IPv4-Only)
+# Generated on Mon Apr 21 13:03:58 UTC 2025
+# From: https://www.google.com/supported_domains
+
 # 216.239.38.120 forcesafesearch.google.com
 
 216.239.38.120 google.com
