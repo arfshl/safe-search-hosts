@@ -1,5 +1,7 @@
-#140.99.233.1 strict-safe-search.ecosia.org
+# Bing Safe Search Host List
+# Updated on: 21-04-2025
+# 204.79.197.220 strict.bing.com
 
-140.99.233.1 edgeservices.bing.com 
-140.99.233.1 bing.com
-140.99.233.1 www.bing.com
+204.79.197.220 edgeservices.bing.com 
+204.79.197.220 bing.com
+204.79.197.220 www.bing.com

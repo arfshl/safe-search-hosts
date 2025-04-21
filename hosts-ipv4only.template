@@ -1,0 +1,11 @@
+# Safe Search Enforcing Hosts (IPv4-Only)
+# Generated on: %timestamp%
+# This hosts file will cause Safe Search to be always on
+
+%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts-ipv4only.txt%
+
+%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/bing/hosts.txt%
+
+%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/ecosia/hosts.txt%
+
+%include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/yandex/hosts.txt%

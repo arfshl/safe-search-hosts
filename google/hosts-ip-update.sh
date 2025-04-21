@@ -55,10 +55,10 @@ function generate_hosts2 {
 }
 
 # Generate hosts file that will cause/ Safe Search to be always on
-# echo "# Google Safe Search Host List" > $output
-# echo "# Generated on $(date)" >> $output
-# echo "# From: $hostURLs" >> $output
-# echo >> $output
+echo "# Google Safe Search Host List" > $output
+echo "# Generated on $(date)" >> $output
+echo "# From: $hostURLs" >> $output
+echo >> $output
 echo "# $IPSix forcesafesearch.google.com" >> $output
 echo "# $IPFour forcesafesearch.google.com" >> $output
 echo >> $output
@@ -66,6 +66,10 @@ generate_hosts $IPSix
 generate_hosts $IPFour
 
 # Generate ipv4-only hosts 
+echo "# Google Safe Search Host List (IPv4-Only)" > $output2
+echo "# Generated on $(date)" >> $output2
+echo "# From: $hostURLs" >> $output2
+echo >> $output2
 echo "# $IPFour forcesafesearch.google.com" >> $output2
 echo >> $output2
 generate_hosts2 $IPFour

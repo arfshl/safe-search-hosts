@@ -1,4 +1,4 @@
-name: hosts-ip-update
+name: Generate Hosts File
 
 on:
   workflow_dispatch:
@@ -17,14 +17,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Update Hosts IP
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install python-abp
       run: |
-        pwd
+        python -m pip install --upgrade pip
+        pip install python-abp
+    - name: Generate Hosts File
+      run: |
         bash $GITHUB_WORKSPACE/google/hosts-ip-update.sh
-        bash $GITHUB_WORKSPACE/bing/hosts-ip-update.sh
-        bash $GITHUB_WORKSPACE/duckduckgo/hosts-ip-update.sh
-        bash $GITHUB_WORKSPACE/brave/hosts-ip-update.sh
-        bash $GITHUB_WORKSPACE/ecosia/hosts-ip-update.sh
+        bash $GITHUB_WORKSPACE/yandex/hosts-ip-update.sh
+        flrender $GITHUB_WORKSPACE/hosts.template $GITHUB_WORKSPACE/hosts.txt
+        flrender $GITHUB_WORKSPACE/hosts-ipv4only.template $GITHUB_WORKSPACE/hosts-ipv4only.txt
       
     - name: Commit and push changes
       run: |

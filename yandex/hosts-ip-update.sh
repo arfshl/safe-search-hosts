@@ -15,18 +15,18 @@
 # Forked And Modified since 20-04-2025
 
 # Delete ALL before executing
-sed -i d /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/bing/hosts.txt
+sed -i d /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/yandex/hosts.txt
 
-# Where to download the list of domains that google search uses.
-# hostURLs=https://www.google.com/supported_domains
+# Where to download the list of domains that yandex uses.
+hostURLs=https://github.com/arfshl/safesearch-enforcing-hosts/raw/main/yandex/domains
 
 # Files
-tempfile='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/bing/supported-domains'
-output='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/bing/hosts.txt'
+tempfile='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/yandex/domains'
+output='/home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/yandex/hosts.txt'
 
-# IP Address for Bing strict mode
+# IP Address for yandex strict mode
 #IPSix=$(dig strict.bing.com AAAA +short)
-IPFour=$(curl --silent 'https://dns.google.com/resolve?name=strict.bing.com&type=A' | jq -cr '.Answer[] | select(.type == 1) | .data')
+IPFour=213.180.193.56
 #if [ -z "$IPSix" ] || [ -z "$IPFour" ]; then
 #        echo "Getting IP address for forcesafesearch.google.com failed"
 #	exit 1
@@ -47,11 +47,11 @@ function generate_hosts {
 }
 
 # Generate hosts file that will cause/ Safe Search to be always on
-# echo "# Google Safe Search Host List" > $output
-# echo "# Generated on $(date)" >> $output
-# echo "# From: $hostURLs" >> $output
-# echo >> $output
-echo "#$IPFour strict.bing.com" >> $output
+echo "# Yandex Safe Search Host List" > $output
+echo "# Generated on $(date)" >> $output
+echo "# From: $hostURLs" >> $output
+echo >> $output
+echo "# $IPFour >> $output
 #echo "#$IPSix strict.bing.com" >> $output
 echo >> $output
 #generate_hosts $IPSix
