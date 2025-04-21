@@ -51,8 +51,8 @@ echo "# Yandex Safe Search Host List" > $output
 echo "# Generated on $(date)" >> $output
 echo "# From: $hostURLs" >> $output
 echo >> $output
-echo "# $IPFour >> $output
-#echo "#$IPSix strict.bing.com" >> $output
+echo "# $IPFour" >> $output
+echo "#$ IPSix strict.bing.com" >> $output
 echo >> $output
 #generate_hosts $IPSix
 generate_hosts $IPFour
