@@ -1,6 +1,7 @@
-# Safe Search Enforcing Hosts
-# Generated on: %timestamp%
-# This hosts file will cause Safe Search to be always on
+# [Adblock Plus 2.0]
+# Title: Safe Search Enforcing Hosts
+# Last Modified: %timestamp%
+# Description: This hosts file will cause Safe Search to be always on
 
 %include /home/runner/work/safesearch-enforcing-hosts/safesearch-enforcing-hosts/google/hosts.txt%
 
