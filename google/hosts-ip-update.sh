@@ -59,11 +59,11 @@ echo "# Google Safe Search Host List" > $output
 echo "# Generated on $(date)" >> $output
 echo "# From: $hostURLs" >> $output
 echo >> $output
-echo "# $IPSix forcesafesearch.google.com" >> $output
 echo "# $IPFour forcesafesearch.google.com" >> $output
+echo "# $IPSix forcesafesearch.google.com" >> $output
 echo >> $output
-generate_hosts $IPSix
 generate_hosts $IPFour
+generate_hosts $IPSix
 
 # Generate ipv4-only hosts 
 echo "# Google Safe Search Host List (IPv4-Only)" > $output2
