@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
-! Version: 202504211322
+! Version: 202504220255
 # Title: Safe Search Enforcing Hosts (IPv4-Only)
 # Last Modified: %timestamp%
 # Description: This hosts file will cause Safe Search to be always on
 
 ! *** https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/google/hosts-ipv4only.txt ***
 # Google Safe Search Host List (IPv4-Only)
-# Generated on Mon Apr 21 13:22:18 UTC 2025
+# Generated on Tue Apr 22 02:54:55 UTC 2025
 # From: https://www.google.com/supported_domains
 
 # 216.239.38.120 forcesafesearch.google.com
@@ -405,7 +405,7 @@
 
 ! *** https://github.com/arfshl/safesearch-enforcing-hosts/raw/master/yandex/hosts.txt ***
 # Yandex Safe Search Host List
-# Generated on Mon Apr 21 13:22:18 UTC 2025
+# Generated on Tue Apr 22 02:54:55 UTC 2025
 # From: https://github.com/arfshl/safesearch-enforcing-hosts/raw/main/yandex/domains
 
 # 213.180.193.56
